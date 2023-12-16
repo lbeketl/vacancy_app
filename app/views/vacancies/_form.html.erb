@@ -1,0 +1,23 @@
+<%= simple_form_for vacancy, html: { class: "form bg-red-500" } do |f| %>
+  <div class="mb-6">
+    <%= f.input :position, label: "Посада", label_html: { class: "form-label" }, input_html: { class: "form-input" }, error_html: { class: "form-input-error" } %>
+  </div>
+
+  <div class="mb-6">
+    <%= f.input :location, label: "Місце знаходження", label_html: { class: "form-label" }, input_html: { class: "form-input" } %>
+  </div>
+
+  <div class="mb-6">
+    <%= f.input :description, as: :text, label: "Опис вакансії", label_html: { class: "form-label" }, input_html: { class: "form-input" }, error_html: { class: "form-input-error" } %>
+  </div>
+
+  <div class="mb-6">
+    <%= f.input :company, label: "Назва компанії", label_html: { class: "form-label" }, input_html: { class: "form-input"}, error_html: { class: "form-input-error" } %>
+  </div>
+
+  <div class="mb-6">
+    <%= f.input :salary, label: "Заробітня плата", label_html: { class: "form-label" }, input_html: { min: 0.01, class: "form-input w-32" }, error_html: { class: "form-input-error" } %>
+  </div>
+
+  <%= f.submit "Додати", class: "btn-success" %>
+<% end %>

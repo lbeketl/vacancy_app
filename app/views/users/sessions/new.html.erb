@@ -1,0 +1,17 @@
+<h2 class="my-10 text-3xl font-bold text-center text-black">Log in</h2>
+
+<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "form" }) do |f| %>
+  <div class="mb-6">
+    <%= f.input :email, autofocus: true, label_html: { class: "form-label" }, input_html: { autocomplete: "email", class: "form-input" } %>
+  </div>
+  <div class="mb-6">
+    <%= f.input :password, label_html: { class: "form-label" }, input_html: { autocomplete: "current-password", class: "form-input" } %>
+  </div>
+   <div class="mb-6">
+    <%= f.input :remember_me, as: :boolean, label_html: { class: "form-label mt-1" }, input_html: { class: "mr-2 rounded-full" } if devise_mapping.rememberable? %>
+  </div>
+
+  <div class="form-actions ">
+    <%= f.button :submit, "Log in", class: "btn-success bg-red-500" %>
+  </div>
+<% end %>
