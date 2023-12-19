@@ -8,9 +8,10 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFi_IhHOwWWsNUlWbA4mnl4Gb-JyMz2AM&libraries=places&callback=initMap" async defer data-turbolinks-eval="false"></script>
   </head>
 
-  <body class="relative flex flex-col min-h-screen bg-white">
+  <body class="relative flex flex-col min-h-screen bg-gray-100",  data-controller="hello">
     <%= render "shared/header" %>
     <%= render "shared/flash_messages" %>
     <div class="container mx-auto main">

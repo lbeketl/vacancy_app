@@ -6,6 +6,7 @@ class PagesController < ApplicationController
   end
 
   def dashboard
+    @vacancies = Vacancy.all
   end
 
   def contact

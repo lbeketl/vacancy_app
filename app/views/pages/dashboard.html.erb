@@ -1,8 +1,24 @@
-
-<div class="flex flex-col justify-between h-[480px] my-[80px] p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 bg-[url('cards/banner.png')] bg-no-repeat bg-cover">
-  <a href="#">
-      <h5 class="mb-2 text-[46px] font-bold tracking-tight text-gray-900 dark:text-white">Speak English in 10 minutes a day</h5>
-  </a>
-
-  <%= link_to "Start learning now", root_path, class: "w-[270px] mt-8 py-4 inline-flex justify-center items-center px-3 py-2 text-lg font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800" %>
-</div>
+<% @vacancies.each do |vacancy| %>
+  <div class="w-[50vw] mx-auto my-8 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <%= image_tag vacancy.logo, class: "rounded-t-lg" %>
+    <div class="p-5">
+      <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-700 dark:text-white"><%= vacancy.position %></h5>
+      <h5 class="mb-2 text-2xl tracking-tight text-gray-500 dark:text-white"><%= vacancy.salary %> ₴</h5>
+      <div class="flex">
+        <span class="mb-2 text-2xl tracking-tight text-red-500 me-4"><%= vacancy.company %></span>
+        <span class="mb-2 text-2xl tracking-tight text-black"><%= vacancy.location %></span>
+      </div>
+      <div class="flex">
+        <button type="button" class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2">Бонуси / премії</button>
+        <button type="button" class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2">Корпоративні заходи</button>
+        <button type="button" class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2">Житло</button>
+      </div>
+        <%= link_to vacancy_path(vacancy), class: "inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-red-500 rounded-lg hover:bg-white hover:text-red-500 hover:border hover:border-red-500 focus:ring-2 focus:outline-none focus:ring-red-600" do %>
+          <span>Докладніше</span>
+          <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+          </svg>
+        <% end %>
+    </div>
+  </div>
+<% end %>

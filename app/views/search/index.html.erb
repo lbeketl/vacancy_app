@@ -1,0 +1,6 @@
+<h2 class="my-10 text-xl font-bold text-center text-black"> Знайдено<%= pluralize(@vacancies.count, "result") %></h2>
+<div id="vacancies">
+  <% @vacancies.each do |vacancy| %>
+    <%= render "vacancies/vacancy", vacancy: vacancy %>
+  <% end %>
+</div>

@@ -1,4 +1,5 @@
 class VacanciesController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_vacancy, only: %i[ show edit update destroy ]
 
   def index
@@ -52,6 +53,6 @@ class VacanciesController < ApplicationController
     end
 
     def vacancy_params
-      params.require(:vacancy).permit(:position, :location, :description, :latitude, :longitude, :salary, :company_logo, :company)
+      params.require(:vacancy).permit(:position, :location, :description, :latitude, :longitude, :salary, :company_logo, :logo, :company)
     end
 end

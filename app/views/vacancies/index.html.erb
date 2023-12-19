@@ -1,14 +1,13 @@
-<p style="color: green"><%= notice %></p>
 
-<h1>Vacancies</h1>
+<h2 class="my-10 text-3xl font-bold text-center text-black">Усі вакансії</h2>
 
 <div id="vacancies">
   <% @vacancies.each do |vacancy| %>
     <%= render vacancy %>
-    <p>
+    <!-- <p>
       <%= link_to "Show this vacancy", vacancy %>
-    </p>
+    </p> -->
   <% end %>
 </div>
 
-<%= link_to "New vacancy", new_vacancy_path %>
+<!-- <%= link_to "New vacancy", new_vacancy_path %> -->

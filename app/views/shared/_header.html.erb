@@ -1,4 +1,4 @@
-<nav class="bg-red-500 dark:border-gray-600 dark:bg-gray-700">
+<nav class="sticky top-0 z-50 bg-red-500 dark:border-gray-600 dark:bg-gray-700">
   <div
     class="flex flex-wrap items-center justify-between max-w-screen-xl p-4 mx-auto"
   >
@@ -6,7 +6,6 @@
       <%= image_tag "logo.svg", class: "h-8 mr-3", alt: "Logo" %>
     <% end %>
     <button
-      data-collapse-toggle="navbar-default"
       type="button"
       class="inline-flex items-center justify-center w-10 h-10 p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
       aria-controls="navbar-default"
@@ -46,4 +45,5 @@
     <% end %>
     <%= render "shared/auth_navbar" %>
   </div>
+  <%= render "search/search_form" %>
 </nav>

@@ -10,10 +10,16 @@
         </div>
         <ul class="py-2">
           <li>
-            <%= link_to "Settings", edit_user_registration_path, class: "block px-4 py-2 text-sm hover:bg-red-500 text-white hover:text-white" %>
+            <%= link_to "Мої вакансії", "#", class: "block px-4 py-2 text-sm hover:bg-red-500 text-white hover:text-white" %>
           </li>
           <li>
-            <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "block w-full text-left px-4 py-2 text-sm hover:bg-red-500 text-white hover:text-white" %>
+            <%= link_to "Додати вакансію", new_vacancy_path, class: "block px-4 py-2 text-sm hover:bg-red-500 text-white hover:text-white" %>
+          </li>
+          <li>
+            <%= link_to "Редагувати профіль", edit_user_registration_path, class: "block px-4 py-2 text-sm hover:bg-red-500 text-white hover:text-white" %>
+          </li>
+          <li>
+            <%= button_to "Вийти", destroy_user_session_path, method: :delete, class: "block w-full text-left px-4 py-2 text-sm hover:bg-red-500 text-white hover:text-white" %>
           </li>
         </ul>
       </div>

@@ -11,7 +11,7 @@
   }
 
   abbr[title="required"] {
-    @apply !text-red-800 no-underline;
+    @apply !text-red-900 no-underline;
   }
 
   .hint {
@@ -27,7 +27,7 @@
   }
 
   .form-input-error {
-    @apply text-red-500 font-bold mt-[5px] inline-block;
+    @apply text-red-900 font-bold mt-[5px] inline-block;
   }
 
   .form-label {
