@@ -1,15 +1,9 @@
 
-
 <%= form_with model: vacancy, local: true, data: { controller: "places", action: "google-maps-callback@window->places#initMap", places_latitude: vacancy.latitude, places_longitude: vacancy.longitude }, class: "form bg-red-500" do |form| %>
   <div class="mb-6">
     <%= form.label :position, class: "form-label" %>
     <%= form.text_field :position, class: 'form-input' %>
   </div>
-
-  <!-- <div class="mb-6">
-    <%= form.label :location, class: "form-label" %>
-    <%= form.text_field :location, class: 'form-input' %>
-  </div> -->
 
   <div class="mb-6">
     <%= form.label :location %>
@@ -17,13 +11,11 @@
   </div>
 
   <div class="mb-6">
-    <%= form.label :latitude, class: "form-label", data: { target: "places.latitude" } %>
-    <%= form.text_field :latitude, class: 'form-input' %>
+    <%= form.hidden_field :latitude, class: 'form-input', data: { target: "places.latitude" } %>
   </div>
 
   <div class="mb-6">
-    <%= form.label :longitude, class: "form-label" %>
-    <%= form.text_field :longitude, class: 'form-input', data: { target: "places.longitude" } %>
+    <%= form.hidden_field :longitude, class: 'form-input', data: { target: "places.longitude" } %>
   </div>
 
   <div class="mb-6">
@@ -46,7 +38,7 @@
   </div>
 
   <div class="p-4">
-    <div data-target="places.map" style="height:400px;width:400px"></div>
+    <div data-target="places.map" class="w-full h-[400px]"></div>
   </div>
 
   <%= form.submit "Додати", class: "btn-success" %>

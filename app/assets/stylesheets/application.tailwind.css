@@ -65,4 +65,8 @@
   .admin-aside-link-icon {
     @apply w-6 h-6 text-gray-400 transition duration-75 group-hover:text-white;
   }
+
+  .logo_img {
+    @apply !w-full !h-[200px];
+  }
 }

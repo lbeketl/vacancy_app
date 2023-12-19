@@ -3,7 +3,7 @@ class VacanciesController < ApplicationController
   before_action :set_vacancy, only: %i[ show edit update destroy ]
 
   def index
-    @vacancies = Vacancy.all
+    @vacancies = current_user.vacancies
   end
 
   def show

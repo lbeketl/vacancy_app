@@ -7,6 +7,7 @@
     "autoprefixer": "^10.4.16",
     "esbuild": "^0.19.9",
     "flowbite": "^2.2.1",
+    "mapkick": "^0.2.6",
     "postcss": "^8.4.32",
     "tailwindcss": "^3.3.6"
   },

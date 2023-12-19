@@ -19,7 +19,7 @@ require "action_cable/engine"
 Bundler.require(*Rails.groups)
 
 Dotenv::Railtie.load
-
+ENV["MAPBOX_ACCESS_TOKEN"] = "pk.eyJ1IjoibGJla2V0bCIsImEiOiJjbHFjcGo0aW0wNDdrMmpuNDd4eHVlOG41In0.uJa3NwXSmOQijL4O31hASQ"
 HOSTNAME = ENV['HOSTNAME']
 module VacancyApp
   class Application < Rails::Application
